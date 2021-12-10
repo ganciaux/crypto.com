@@ -1,0 +1,228 @@
+{
+  "coins": [
+    {
+      "symbol": "ATOM",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "ETH",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "BAT",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "YGG",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "LTC",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "EGLD",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "ALICE",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "EGLD",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "WTC",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "CHZ",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "EGLD",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "SOL",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "XLM",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "BTC",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "QI",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "VET",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "CSPR",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "USDC",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "FTM",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "HOT",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "MANA",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "AVAX",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "WAXP",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "UNI",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "SAND",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "THETA",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "SHIB",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "GALA",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "DOGE",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "CHZ",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "ADA",
+      "date": "",
+      "eur": { "sell": 0.0, "buy": 0.0 },
+      "usd": { "sell": 0.0, "buy": 0.0 },
+      "link": ""
+    },
+    {
+      "symbol": "CRO",
+      "date": "",
+      "eur": { "sell": 9.0, "buy": 4.0 },
+      "usd": { "sell": 10.0, "buy": 5.0 },
+      "link": ""
+    }
+  ]
+}
