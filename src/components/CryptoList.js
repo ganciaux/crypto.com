@@ -11,7 +11,7 @@ import {
   Switch,
 } from "antd";
 import Loader from "./Loader";
-import { DownloadOutlined } from '@ant-design/icons';
+import { HistoryOutlined, LineChartOutlined } from '@ant-design/icons';
 
 import crypto_com_cryptos from "../data/crypto_com_cryptos.json";
 import crypto_waiting_price from "../data/crypto_waiting_price.json";
@@ -249,8 +249,8 @@ const CryptoList = () => {
                 value={crypto.total_supply}
                 isMillify
               />
-              <Button type="primary" shape="round" icon={<DownloadOutlined/>}  onClick={() => showModal(currency, 'transactions')}/>
-              <Button type="primary" shape="round" icon={<DownloadOutlined/>} onClick={() => showModal(currency, 'market')}/>
+              <Button type="primary" shape="round" icon={<HistoryOutlined/>}  onClick={() => showModal(currency, 'transactions')}/>
+              <Button type="primary" shape="round" icon={<LineChartOutlined/>} onClick={() => showModal(currency, 'market')}/>
 
                
             </Card>
