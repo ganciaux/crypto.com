@@ -12,6 +12,7 @@ const cryptoApiFormatInit = () => {
     waiting_price_sell: 0,
     waiting_price_buy: 0,
     market_cap: 0,
+    market_cap_rank:0,
     total_volume: 0,
     circulating_supply: 0,
     total_supply: 0,
@@ -42,6 +43,7 @@ export const cryptoApiFormat = (dataApi, api) => {
         total_supply: dataApi.total_supply,
         daily_change: dataApi.daily_change,
         ath: dataApi.ath,
+        market_cap_rank: dataApi.market_cap_rank
       };
     default:
       break;

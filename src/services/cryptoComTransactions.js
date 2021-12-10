@@ -93,6 +93,7 @@ const read = (file) => {
   let result = {
     cryptos: {
       coins: [],
+      ids:"",
       total_purchase: 0.0,
     },
     transactions: [],
@@ -120,7 +121,9 @@ const read = (file) => {
 
   result.cryptos.coins.forEach((coin) => {
     coin.total = getCurrencyTotal(coin)
+    result.cryptos.ids+=`;${coin.symbol}`;
   })
+  result.cryptos.ids+=';'
 
   result.cryptos.total_purchase = getTotal(result.transactions)
 
