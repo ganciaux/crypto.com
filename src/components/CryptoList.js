@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 import {
   Card,
   Row,
@@ -9,44 +9,48 @@ import {
   Modal,
   Button,
   Switch,
-} from "antd";
-import Loader from "./Loader";
-import { HistoryOutlined, LineChartOutlined } from '@ant-design/icons';
+} from 'antd'
+import Loader from './Loader'
+import { HistoryOutlined, LineChartOutlined } from '@ant-design/icons'
 
-import crypto_com_cryptos from "../data/crypto_com_cryptos.json";
-import crypto_waiting_price from "../data/crypto_waiting_price.json";
-import { useGetCryptosMarketsQuery } from "../services/cryptoApiGecko";
-import { cryptoFiatGet } from "../services/cryptoFiat";
-import { cryptoApiFormat } from "../services/cryptoApiFormat";
-import CryptoData from "./CryptoData";
+import crypto_com_cryptos from '../data/crypto_com_cryptos.json'
+import crypto_waiting_price from '../data/crypto_waiting_price.json'
+import { useGetCryptosMarketsQuery } from '../services/cryptoApiGecko'
+import { cryptoFiatGet } from '../services/cryptoFiat'
+import { cryptoApiFormat } from '../services/cryptoApiFormat'
+import CryptoData from './CryptoData'
+import CryptoTransactions from './CryptoTransactions'
+import CryptoMarket from './CryptoMarket'
 
 const CryptoList = () => {
-  const { Option } = Select;
-  const [isEuro, setIsEuro] = useState(true);
-  const [profitLoss, setProfitLoss] = useState(0.0);
-  const [currency, setCurrency] = useState("");
-  const [sortingBy, setSortingBy] = useState("current");
-  const [searchTerm, setSearchTerm] = useState("");
+  const { Option } = Select
+  const [isEuro, setIsEuro] = useState(true)
+  const [profitLoss, setProfitLoss] = useState(0.0)
+  const [currency, setCurrency] = useState('')
+  const [cryptoSelected, setCryptoSelected] = useState({})
+  const [sortingBy, setSortingBy] = useState('current')
+  const [searchTerm, setSearchTerm] = useState('')
   const [isModalVisible, setIsModalVisible] = useState(false)
   const [modalMode, setModalMode] = useState('transactions')
-  const [cryptosDataApiFormated, setCryptosDataApiFormated] = useState([]);
+  const [cryptosDataApiFormated, setCryptosDataApiFormated] = useState([])
   const {
     data: cryptosDataApi,
     isFetching,
     isSuccess,
     refetch,
-  } = useGetCryptosMarketsQuery({ vs_currency: currency });
+  } = useGetCryptosMarketsQuery({ vs_currency: currency })
 
   const handleVsCurrency = (checked, event) => {
-    setIsEuro(checked);
-  };
+    setIsEuro(checked)
+  }
 
   function handleSortingBy(value) {
-    setSortingBy(value);
+    setSortingBy(value)
   }
 
   const showModal = (current, mode) => {
     setIsModalVisible(true)
+    setCryptoSelected(current)
     setModalMode(mode)
   }
 
@@ -56,77 +60,82 @@ const CryptoList = () => {
 
   const handleCancel = () => {
     setIsModalVisible(false)
+    setCryptoSelected({})
   }
-  
+
   function compare(a, b) {
-    if (sortingBy === "name") {
+    if (sortingBy === 'name') {
       if (a.name < b.name) {
-        return -1;
+        return -1
       }
       if (a.name > b.name) {
-        return 1;
+        return 1
       }
-      return 0;
-    } else if (sortingBy === "profit") {
-      return b.profit - a.profit;
-    } else if (sortingBy === "rank") {
-      return a.market_cap_rank - b.market_cap_rank;
-    } else if (sortingBy === "current") {
-      return b.total_current - a.total_current;
+      return 0
+    } else if (sortingBy === 'profit') {
+      return b.profit - a.profit
+    } else if (sortingBy === 'rank') {
+      return a.market_cap_rank - b.market_cap_rank
+    } else if (sortingBy === 'current') {
+      return b.total_current - a.total_current
     }
   }
 
-  useEffect(() => {
-    setCurrency(cryptoFiatGet(isEuro, "vs_currency"));
-    refetch();
-  }, [isEuro]);
+  console.log('cyptolist: render')
 
   useEffect(() => {
-    let total = 0.0;
+    setCurrency(cryptoFiatGet(isEuro, 'vs_currency'))
+    refetch()
+    console.log('Cryptolist: useEffect: isEuro')
+  }, [isEuro])
+
+  useEffect(() => {
+    let total = 0.0
     const dataApiFormated = cryptosDataApi?.map((crypto) => {
-      const dataFormated = cryptoApiFormat(crypto, "gecko");
+      const dataFormated = cryptoApiFormat(crypto, 'gecko')
       const coinData = crypto_com_cryptos.coins?.find((coin) => {
-        return coin.symbol.toLowerCase() === dataFormated.symbol.toLowerCase();
-      });
+        return coin.symbol.toLowerCase() === dataFormated.symbol.toLowerCase()
+      })
       const coinWaitingPrice = crypto_waiting_price.coins?.find((coin) => {
-        return coin.symbol.toLowerCase() === dataFormated.symbol.toLowerCase();
-      });
+        return coin.symbol.toLowerCase() === dataFormated.symbol.toLowerCase()
+      })
       if (coinData !== undefined) {
-        dataFormated.coins = coinData.total.coins;
+        dataFormated.coins = coinData.total.coins
         dataFormated.total =
-          coinData.total[currency].purchases + coinData.total[currency].sales;
+          coinData.total[currency].purchases + coinData.total[currency].sales
         dataFormated.total_current =
-          dataFormated.current_price * dataFormated.coins;
-        dataFormated.profit = dataFormated.total_current - dataFormated.total;
-        dataFormated.purchase_price = dataFormated.total / dataFormated.coins;
-        dataFormated.operations = coinData.operations;
+          dataFormated.current_price * dataFormated.coins
+        dataFormated.profit = dataFormated.total_current - dataFormated.total
+        dataFormated.purchase_price = dataFormated.total / dataFormated.coins
+        dataFormated.operations = coinData.operations
       }
       if (coinWaitingPrice !== undefined) {
-        dataFormated.waiting_price_sell = coinWaitingPrice[currency].sell;
-        dataFormated.waiting_price_buy = coinWaitingPrice[currency].buy;
+        dataFormated.waiting_price_sell = coinWaitingPrice[currency].sell
+        dataFormated.waiting_price_buy = coinWaitingPrice[currency].buy
       }
       if (dataFormated.profit > 0) {
-        dataFormated.class = "crypto-profit";
+        dataFormated.class = 'crypto-profit'
       } else {
-        dataFormated.class = "crypto-loss";
+        dataFormated.class = 'crypto-loss'
       }
-      total += dataFormated.profit;
-      return dataFormated;
-    });
+      total += dataFormated.profit
+      return dataFormated
+    })
 
     const filteredData = dataApiFormated?.filter(
       (item) =>
         item.name.toLowerCase().includes(searchTerm) ||
-        item.symbol.toLowerCase().includes(searchTerm)
-    );
+        item.symbol.toLowerCase().includes(searchTerm),
+    )
 
-    filteredData?.sort(compare);
+    filteredData?.sort(compare)
 
-    setCryptosDataApiFormated(filteredData);
-    setProfitLoss(total);
-  }, [cryptosDataApi, sortingBy, searchTerm]);
+    setCryptosDataApiFormated(filteredData)
+    setProfitLoss(total)
+    console.log('Cryptolist: useEffect')
+  }, [cryptosDataApi, sortingBy, searchTerm])
 
-  if (isFetching) return <Loader />;
+  if (isFetching) return <Loader />
 
   return (
     <>
@@ -144,11 +153,11 @@ const CryptoList = () => {
           toFixed={2}
         />
         <p>
-          {cryptoFiatGet(isEuro, "label")}:{" "}
+          {cryptoFiatGet(isEuro, 'label')}:{' '}
           <Switch defaultChecked checked={isEuro} onChange={handleVsCurrency} />
         </p>
         <p>
-        <Input
+          <Input
             placeholder="Search Cryptocurrency"
             onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
           />
@@ -185,6 +194,12 @@ const CryptoList = () => {
                 value={crypto.purchase_price}
                 isEuro={isEuro}
                 toFixed={2}
+              />
+              <CryptoData
+                label="Price (now)"
+                value={crypto.current_price}
+                isEuro={isEuro}
+                toFixed={6}
               />
               <CryptoData
                 label="Total (purchase)"
@@ -249,10 +264,18 @@ const CryptoList = () => {
                 value={crypto.total_supply}
                 isMillify
               />
-              <Button type="primary" shape="round" icon={<HistoryOutlined/>}  onClick={() => showModal(currency, 'transactions')}/>
-              <Button type="primary" shape="round" icon={<LineChartOutlined/>} onClick={() => showModal(currency, 'market')}/>
-
-               
+              <Button
+                type="primary"
+                shape="round"
+                icon={<HistoryOutlined />}
+                onClick={() => showModal(crypto, 'transactions')}
+              />
+              <Button
+                type="primary"
+                shape="round"
+                icon={<LineChartOutlined />}
+                onClick={() => showModal(crypto, 'market')}
+              />
             </Card>
           </Col>
         ))}
@@ -265,13 +288,17 @@ const CryptoList = () => {
         width={'85%'}
       >
         {modalMode === 'transactions' ? (
-          "transaction"
+          <CryptoTransactions
+            crypto={cryptoSelected}
+            isEuro={isEuro}
+            currency={currency}
+          />
         ) : (
-          "market"
+          <CryptoMarket crypto={cryptoSelected} />
         )}
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default CryptoList;
+export default CryptoList

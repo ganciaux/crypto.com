@@ -1,10 +1,7 @@
 import React from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import { Layout, Typography, Space } from 'antd'
-import {
-  HomePage,
-  Navbar,
-} from './components'
+import { HomePage, Navbar } from './components'
 import './App.css'
 import CryptoList from './components/CryptoList'
 
