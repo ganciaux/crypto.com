@@ -22,7 +22,9 @@ const cryptoApiFormatInit = () => {
     total: 0,
     total_current:0,
     profit: 0,
-    operations:[]
+    operations:[],
+    link:"",
+    comment:""
   };
 };
 

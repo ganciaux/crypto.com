@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {
+  Anchor,
   Card,
   Row,
   Col,
@@ -23,6 +24,7 @@ import CryptoTransactions from './CryptoTransactions'
 import CryptoMarket from './CryptoMarket'
 
 const CryptoList = () => {
+  const { Link } = Anchor;
   const { Option } = Select
   const [isEuro, setIsEuro] = useState(true)
   const [profitLoss, setProfitLoss] = useState(0.0)
@@ -112,6 +114,8 @@ const CryptoList = () => {
       if (coinWaitingPrice !== undefined) {
         dataFormated.waiting_price_sell = coinWaitingPrice[currency].sell
         dataFormated.waiting_price_buy = coinWaitingPrice[currency].buy
+        dataFormated.link = coinWaitingPrice.link
+        dataFormated.comment = coinWaitingPrice.comment
       }
       if (dataFormated.profit > 0) {
         dataFormated.class = 'crypto-profit'
@@ -188,7 +192,7 @@ const CryptoList = () => {
               }
               hoverable
             >
-              <CryptoData label="Coins" value={crypto.coins} toFixed={6} />
+              <CryptoData label="Coins" value={crypto.coins} />
               <CryptoData
                 label="Purchase"
                 value={crypto.purchase_price}
@@ -199,7 +203,6 @@ const CryptoList = () => {
                 label="Price (now)"
                 value={crypto.current_price}
                 isEuro={isEuro}
-                toFixed={6}
               />
               <CryptoData
                 label="Total (purchase)"
@@ -224,7 +227,6 @@ const CryptoList = () => {
                 label="Price (now)"
                 value={crypto.current_price}
                 isEuro={isEuro}
-                toFixed={6}
               />
               <CryptoData
                 label="Price (wait sell)"
@@ -242,7 +244,6 @@ const CryptoList = () => {
                 label="All Time High"
                 value={crypto.ath}
                 isEuro={isEuro}
-                toFixed={6}
               />
               <CryptoData
                 label="Market cap"
@@ -263,6 +264,12 @@ const CryptoList = () => {
                 label="Total supply"
                 value={crypto.total_supply}
                 isMillify
+              />
+              
+              {crypto.link.length>0 && (<a href={crypto.link} title="Link" target="blank">Link</a>)}
+              <CryptoData
+                label="Comment"
+                value={crypto.comment}
               />
               <Button
                 type="primary"
@@ -294,7 +301,7 @@ const CryptoList = () => {
             currency={currency}
           />
         ) : (
-          <CryptoMarket crypto={cryptoSelected} />
+          <CryptoMarket crypto={cryptoSelected} isEuro={isEuro} />
         )}
       </Modal>
     </>

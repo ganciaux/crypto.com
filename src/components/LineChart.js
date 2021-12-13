@@ -1,12 +1,15 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
 import { Col, Row, Typography } from 'antd'
+import { cryptoFiatGet } from "../services/cryptoFiat";
 
 const { Title } = Typography
 
-const LineChart = ({ coinHistory, currentPrice, coinName }) => {
+const LineChart = ({ coinHistory, currentPrice, coinName, isEuro }) => {
   const coinPrice = []
   const coinTimestamp = []
+  const symbol = isEuro === undefined ? "???" : cryptoFiatGet(isEuro, "symbol");
+  const label = isEuro === undefined ? "???" : cryptoFiatGet(isEuro, "label");
 
   console.log('LineChart: render')
 
@@ -19,7 +22,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
     labels: coinTimestamp,
     datasets: [
       {
-        label: 'Price In USD',
+        label: `Price In ${label}`,
         data: coinPrice,
         fill: false,
         backgroundColor: '#0071bd',
@@ -51,7 +54,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
             Change: {coinHistory?.data?.change}%
           </Title>
           <Title level={5} className="current-price">
-            Current {coinName} Price: $ {currentPrice}
+            Current {coinName} Price: {symbol} {currentPrice}
           </Title>
         </Col>
       </Row>

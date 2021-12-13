@@ -6,15 +6,16 @@ import { useGetCryptoMarketChartRangeQuery } from '../services/cryptoApiGecko'
 
 import Loader from './Loader'
 import LineChart from './LineChart'
+import { cryptoFiatGet } from '../services/cryptoFiat'
 
 const { Option } = Select
 
-const CryptoMarket = ({ crypto }) => {
+const CryptoMarket = ({ crypto, isEuro }) => {
   const [timeperiod, setTimeperiod] = useState(7 * 24 * 3600)
   const { data: coinHistoryRange, isFetching } =
     useGetCryptoMarketChartRangeQuery({
       id: crypto.id,
-      currency: 'eur',
+      currency: cryptoFiatGet(isEuro, 'vs_currency'),
       from: moment().unix() - timeperiod,
       to: moment().unix(),
     })
@@ -55,6 +56,7 @@ const CryptoMarket = ({ crypto }) => {
         coinHistory={coinHistoryRange}
         currentPrice={millify(crypto.current_price)}
         coinName={crypto.name}
+        isEuro={isEuro}
       />
     </Col>
   )
