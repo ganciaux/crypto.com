@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from '@git /react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 const cryptoGeckoHeaders = {
   'x-rapidapi-host': 'coinGecko1.p.rapidapi.com',
