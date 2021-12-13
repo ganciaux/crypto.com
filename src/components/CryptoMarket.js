@@ -19,7 +19,7 @@ const CryptoMarket = ({ crypto }) => {
       to: moment().unix(),
     })
 
-  console.log('cyptomarket: render', timeperiod)
+  console.log('cyptomarket: render', timeperiod, isFetching)
 
   if (isFetching) return <Loader />
 
