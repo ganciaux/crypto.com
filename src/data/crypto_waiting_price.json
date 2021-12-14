@@ -1,273 +1,274 @@
 {
   "coins": [
     {
-      "name":"Avalanche",
+      "name": "Avalanche",
       "symbol": "AVAX",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=qnoTYGHB8fc",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"BenQi",
+      "name": "BenQi",
       "date": "",
       "symbol": "QI",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Basic Attention Token",
+      "name": "Basic Attention Token",
       "symbol": "BAT",
       "date": "07/12/2021",
       "eur": { "sell": 0.0, "buy": 0.77 },
       "usd": { "sell": 0.0, "buy": 0.87 },
       "link": "https://www.youtube.com/watch?v=tj2MJysY5tE",
-      "comment":"vendre vers 1.4E avant chute vers 0.77E"
+      "comment": "vendre vers 1.4E avant chute vers 0.77E"
     },
     {
-      "name":"Bitcoin",
+      "name": "Bitcoin",
       "symbol": "BTC",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Cardano",
+      "name": "Cardano",
       "symbol": "ADA",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=CSfwcJgnvYI",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Casper Network",
+      "name": "Casper Network",
       "symbol": "CSPR",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=nNfQGtpchME",
-      "comment":""
+      "comment": "acheter <0.06$ 0.052E"
     },
     {
-      "name":"Chiliz",
+      "name": "Chiliz",
       "symbol": "CHZ",
       "date": "12/12/2021",
       "eur": { "sell": 0.65, "buy": 0.19 },
       "usd": { "sell": 0.73, "buy": 0.21 },
       "link": "https://www.youtube.com/watch?v=Nd82sjoNAx4",
-      "comment":""
+      "comment": "achat 0.06/0.16$ vente 0.8/0.9$ avant rechute"
     },
     {
-      "name":"Cosmos",
+      "name": "Cosmos",
       "symbol": "ATOM",
       "date": "07/12/2021",
       "eur": { "sell": 39, "buy": 16 },
       "usd": { "sell": 44.0, "buy": 18 },
       "link": "https://www.youtube.com/watch?v=x2kPBs4YerQ",
-      "comment":"vendre vers 33$ 29E avant chute vers 10$ 8.9E"
+      "comment": "vendre vers 33$ 29E avant chute vers 10$ 8.9E"
     },
     {
-      "name":"Crypto.com Coin",
+      "name": "Crypto.com Coin",
       "symbol": "CRO",
       "date": "",
       "eur": { "sell": 9.0, "buy": 4.0 },
       "usd": { "sell": 10.0, "buy": 5.0 },
       "link": "https://www.youtube.com/watch?v=0OY4GMhQQI4",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Decentraland",
+      "name": "Decentraland",
       "symbol": "MANA",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=KCPTNEFltYI",
-      "comment":""
+      "comment": ""
     },
-    
+
     {
-      "name":"Dodge coin",
+      "name": "Dodge coin",
       "symbol": "DOGE",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=vXk4MIRMo5c",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Elrond",
+      "name": "Elrond",
       "symbol": "EGLD",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=_ihnpM1bAPY",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Enjin Coin",
+      "name": "Enjin Coin",
       "symbol": "ENJ",
       "date": "https://www.youtube.com/watch?v=GY2bQT7ixm4",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=_ihnpM1bAPY",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Ethereum",
+      "name": "Ethereum",
       "symbol": "ETH",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Fantom",
+      "name": "Fantom",
       "symbol": "FTM",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=o510_6749uw",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Gala",
+      "name": "Gala",
       "symbol": "GALA",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=jv2U4B3TlFg",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Holo",
+      "name": "Holo",
       "symbol": "HOT",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=PQVnPuTC_1M",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Litecoin",
+      "name": "Litecoin",
       "symbol": "LTC",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=zsr8HHFfJno",
-      "comment":""
+      "comment": "vendre > 300/350$ dans vert acheter <110 voir 60/80"
     },
     {
-      "name":"My Neighbor Alice",
+      "name": "My Neighbor Alice",
       "symbol": "ALICE",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
-      "link": "https://www.youtube.com/watch?v=zqOnLA4SUfE"
+      "link": "https://www.youtube.com/watch?v=zqOnLA4SUfE",
+      "comment": "acheter 8/5$ vendre >24$"
     },
     {
-      "name":"Shiba Inu",
+      "name": "Shiba Inu",
       "symbol": "SHIB",
       "date": "https://www.youtube.com/watch?v=psT5_upTGik",
       "eur": { "sell": 0.0, "buy": 0.000025 },
       "usd": { "sell": 0.0, "buy": 0.000029 },
       "link": "13/12/2021",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Solana",
+      "name": "Solana",
       "symbol": "SOL",
-      "date": "",
+      "date": "08/1272021",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=XYdS0vOb3SY",
-      "comment":""
+      "comment": "acheter 127/100E 137/115...50/60$"
     },
     {
-      "name":"Stellar",
+      "name": "Stellar",
       "symbol": "XLM",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=6ZWW7FHGDCg",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"The Sandbox",
+      "name": "The Sandbox",
       "symbol": "SAND",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=YZITTSr4x_k",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Theta Network",
+      "name": "Theta Network",
       "symbol": "THETA",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=5HoeVFVBYcs",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":" USD Coin",
+      "name": " USD Coin",
       "symbol": "USDC",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Uniswap",
+      "name": "Uniswap",
       "symbol": "UNI",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"VeChain",
+      "name": "VeChain",
       "symbol": "VET",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "https://www.youtube.com/watch?v=4KvrTNtYDKQ",
-      "comment":""
+      "comment": "acheter <0.05 vendre 0.18 ou ath"
     },
     {
-      "name":"WAX",
+      "name": "WAX",
       "symbol": "WAXP",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Waltonchain",
+      "name": "Waltonchain",
       "symbol": "WTC",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "",
-      "comment":""
+      "comment": ""
     },
     {
-      "name":"Yield Guild Games",
+      "name": "Yield Guild Games",
       "symbol": "YGG",
       "date": "",
       "eur": { "sell": 0.0, "buy": 0.0 },
       "usd": { "sell": 0.0, "buy": 0.0 },
       "link": "",
-      "comment":""
+      "comment": ""
     }
   ]
 }
